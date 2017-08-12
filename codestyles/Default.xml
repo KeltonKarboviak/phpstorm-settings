@@ -4,10 +4,12 @@
   <option name="HTML_ATTRIBUTE_WRAP" value="0" />
   <option name="HTML_ALIGN_TEXT" value="true" />
   <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+  <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
   <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html" />
   <option name="HTML_INLINE_ELEMENTS" value="abbr,acronym,b,basefont,bdo,big,br,cite,cite,code,dfn,em,font,i,img,input,kbd,label,q,s,samp,select,span,strike,strong,sub,sup,textarea,tt,u,var" />
-  <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="title,h1,h2,h3,h4,h5,h6,p,b" />
+  <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="title,h1,h2,h3,h4,h5,h6,p,b,i" />
   <option name="HTML_ENFORCE_QUOTES" value="true" />
+  <option name="FORMATTER_TAGS_ENABLED" value="true" />
   <PHPCodeStyleSettings>
     <option name="ALIGN_KEY_VALUE_PAIRS" value="true" />
     <option name="ALIGN_PHPDOC_PARAM_NAMES" value="true" />
