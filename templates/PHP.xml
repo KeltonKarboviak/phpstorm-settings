@@ -1,0 +1,8 @@
+<templateSet group="PHP">
+  <template name="unit-test" value="/** @test */&#10;function $NAME$()&#10;{&#10;    $END$&#10;}" description="New PHPUnit unit test" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;the_one_where&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+</templateSet>
