@@ -299,8 +299,8 @@
         </phpinfo>
       </interpreter>
       <interpreter name="PHP 5.4">
-        <phpinfo binary_type="PHP" php_cgi="$USER_HOME$/.phpbrew/php/php-5.4.42/bin/php-cgi" php_cli="$USER_HOME$/.phpbrew/php/php-5.4.42/bin/php" path_separator=":" version="5.4.42">
-          <additional_php_ini />
+        <phpinfo binary_type="PHP" php_cgi="$USER_HOME$/.phpbrew/php/php-5.4.42/bin/php-cgi" php_cli="$USER_HOME$/.phpbrew/php/php-5.4.42/bin/php" path_separator=":" version="5.4.42" warning="$USER_HOME$/.phpbrew/php/php-5.4.42/bin/php: /home/linuxbrew/.linuxbrew/lib/libcurl.so.4: no version information available (required by /home/kkarboviak/.phpbrew/php/php-5.4.42/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-5.4.42/bin/php: /home/linuxbrew/.linuxbrew/lib/libssl.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-5.4.42/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-5.4.42/bin/php: /home/linuxbrew/.linuxbrew/lib/libcrypto.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-5.4.42/bin/php)&#10;">
+          <additional_php_ini>$USER_HOME$/.phpbrew/php/php-5.4.42/var/db/xdebug.ini</additional_php_ini>
           <configuration_file>$USER_HOME$/.phpbrew/php/php-5.4.42/etc/php.ini</configuration_file>
           <configuration_options>
             <configuration_option name="SMTP" value="localhost" />
@@ -323,6 +323,7 @@
             <configuration_option name="browscap" value="" />
             <configuration_option name="cli.pager" value="" />
             <configuration_option name="cli.prompt" value="\b \&gt; " />
+            <configuration_option name="curl.cainfo" value="" />
             <configuration_option name="date.default_latitude" value="31.7667" />
             <configuration_option name="date.default_longitude" value="35.2333" />
             <configuration_option name="date.sunrise_zenith" value="90.583333" />
@@ -361,7 +362,7 @@
             <configuration_option name="ignore_repeated_source" value="" />
             <configuration_option name="ignore_user_abort" value="0" />
             <configuration_option name="implicit_flush" value="1" />
-            <configuration_option name="include_path" value=".:/home/kkarboviak/.phpbrew/php/php-5.4.42/lib/php" />
+            <configuration_option name="include_path" value=".:/home/kkarboviak/.phpbrew/php/php-5.4.42/lib/php/pear" />
             <configuration_option name="log_errors" value="1" />
             <configuration_option name="log_errors_max_len" value="1024" />
             <configuration_option name="mail.add_x_header" value="1" />
@@ -466,6 +467,7 @@
             <configuration_option name="short_open_tag" value="" />
             <configuration_option name="smtp_port" value="25" />
             <configuration_option name="sql.safe_mode" value="" />
+            <configuration_option name="sqlite3.extension_dir" value="" />
             <configuration_option name="track_errors" value="1" />
             <configuration_option name="unserialize_callback_func" value="" />
             <configuration_option name="upload_max_filesize" value="2M" />
@@ -476,6 +478,66 @@
             <configuration_option name="user_ini.cache_ttl" value="300" />
             <configuration_option name="user_ini.filename" value=".user.ini" />
             <configuration_option name="variables_order" value="GPCS" />
+            <configuration_option name="xdebug.auto_trace" value="0" />
+            <configuration_option name="xdebug.cli_color" value="0" />
+            <configuration_option name="xdebug.collect_assignments" value="0" />
+            <configuration_option name="xdebug.collect_includes" value="1" />
+            <configuration_option name="xdebug.collect_params" value="0" />
+            <configuration_option name="xdebug.collect_return" value="0" />
+            <configuration_option name="xdebug.collect_vars" value="0" />
+            <configuration_option name="xdebug.coverage_enable" value="1" />
+            <configuration_option name="xdebug.default_enable" value="1" />
+            <configuration_option name="xdebug.dump.COOKIE" value="" />
+            <configuration_option name="xdebug.dump.ENV" value="" />
+            <configuration_option name="xdebug.dump.FILES" value="" />
+            <configuration_option name="xdebug.dump.GET" value="" />
+            <configuration_option name="xdebug.dump.POST" value="" />
+            <configuration_option name="xdebug.dump.REQUEST" value="" />
+            <configuration_option name="xdebug.dump.SERVER" value="" />
+            <configuration_option name="xdebug.dump.SESSION" value="" />
+            <configuration_option name="xdebug.dump_globals" value="1" />
+            <configuration_option name="xdebug.dump_once" value="1" />
+            <configuration_option name="xdebug.dump_undefined" value="0" />
+            <configuration_option name="xdebug.extended_info" value="1" />
+            <configuration_option name="xdebug.file_link_format" value="" />
+            <configuration_option name="xdebug.force_display_errors" value="0" />
+            <configuration_option name="xdebug.force_error_reporting" value="0" />
+            <configuration_option name="xdebug.halt_level" value="0" />
+            <configuration_option name="xdebug.idekey" value="" />
+            <configuration_option name="xdebug.max_nesting_level" value="256" />
+            <configuration_option name="xdebug.max_stack_frames" value="-1" />
+            <configuration_option name="xdebug.overload_var_dump" value="2" />
+            <configuration_option name="xdebug.profiler_aggregate" value="0" />
+            <configuration_option name="xdebug.profiler_append" value="0" />
+            <configuration_option name="xdebug.profiler_enable" value="0" />
+            <configuration_option name="xdebug.profiler_enable_trigger" value="0" />
+            <configuration_option name="xdebug.profiler_enable_trigger_value" value="" />
+            <configuration_option name="xdebug.profiler_output_dir" value="/tmp" />
+            <configuration_option name="xdebug.profiler_output_name" value="cachegrind.out.%p" />
+            <configuration_option name="xdebug.remote_addr_header" value="" />
+            <configuration_option name="xdebug.remote_autostart" value="0" />
+            <configuration_option name="xdebug.remote_connect_back" value="0" />
+            <configuration_option name="xdebug.remote_cookie_expire_time" value="3600" />
+            <configuration_option name="xdebug.remote_enable" value="0" />
+            <configuration_option name="xdebug.remote_handler" value="dbgp" />
+            <configuration_option name="xdebug.remote_host" value="localhost" />
+            <configuration_option name="xdebug.remote_log" value="" />
+            <configuration_option name="xdebug.remote_mode" value="req" />
+            <configuration_option name="xdebug.remote_port" value="9000" />
+            <configuration_option name="xdebug.scream" value="0" />
+            <configuration_option name="xdebug.show_error_trace" value="0" />
+            <configuration_option name="xdebug.show_exception_trace" value="0" />
+            <configuration_option name="xdebug.show_local_vars" value="0" />
+            <configuration_option name="xdebug.show_mem_delta" value="0" />
+            <configuration_option name="xdebug.trace_enable_trigger" value="0" />
+            <configuration_option name="xdebug.trace_enable_trigger_value" value="" />
+            <configuration_option name="xdebug.trace_format" value="0" />
+            <configuration_option name="xdebug.trace_options" value="0" />
+            <configuration_option name="xdebug.trace_output_dir" value="/tmp" />
+            <configuration_option name="xdebug.trace_output_name" value="trace.%c" />
+            <configuration_option name="xdebug.var_display_max_children" value="128" />
+            <configuration_option name="xdebug.var_display_max_data" value="512" />
+            <configuration_option name="xdebug.var_display_max_depth" value="3" />
             <configuration_option name="xmlrpc_error_number" value="0" />
             <configuration_option name="xmlrpc_errors" value="0" />
             <configuration_option name="xsl.security_prefs" value="44" />
@@ -488,7 +550,11 @@
             <configuration_option name="zlib.output_compression_level" value="-1" />
             <configuration_option name="zlib.output_handler" value="" />
           </configuration_options>
-          <debuggers />
+          <debuggers>
+            <debugger_info debugger="xdebug" debugger_version="2.4.1">
+              <debug_extensions />
+            </debugger_info>
+          </debuggers>
           <loaded_extensions>
             <extension name="Core" />
             <extension name="PDO" />
@@ -500,6 +566,7 @@
             <extension name="bz2" />
             <extension name="calendar" />
             <extension name="ctype" />
+            <extension name="curl" />
             <extension name="date" />
             <extension name="dom" />
             <extension name="ereg" />
@@ -518,16 +585,19 @@
             <extension name="pcntl" />
             <extension name="pcre" />
             <extension name="pdo_mysql" />
+            <extension name="pdo_sqlite" />
             <extension name="posix" />
             <extension name="readline" />
             <extension name="session" />
             <extension name="shmop" />
             <extension name="sockets" />
+            <extension name="sqlite3" />
             <extension name="standard" />
             <extension name="sysvmsg" />
             <extension name="sysvsem" />
             <extension name="sysvshm" />
             <extension name="tokenizer" />
+            <extension name="xdebug" />
             <extension name="xml" />
             <extension name="xmlreader" />
             <extension name="xmlwriter" />
@@ -538,7 +608,7 @@
         </phpinfo>
       </interpreter>
       <interpreter name="PHP 7.0">
-        <phpinfo binary_type="PHP" php_cgi="$USER_HOME$/.phpbrew/php/php-7.0.18/bin/php-cgi" php_cli="$USER_HOME$/.phpbrew/php/php-7.0.18/bin/php" path_separator=":" version="7.0.18">
+        <phpinfo binary_type="PHP" php_cgi="$USER_HOME$/.phpbrew/php/php-7.0.18/bin/php-cgi" php_cli="$USER_HOME$/.phpbrew/php/php-7.0.18/bin/php" path_separator=":" version="7.0.18" warning="$USER_HOME$/.phpbrew/php/php-7.0.18/bin/php: /home/linuxbrew/.linuxbrew/lib/libcurl.so.4: no version information available (required by /home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php: /home/linuxbrew/.linuxbrew/lib/libssl.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php: /home/linuxbrew/.linuxbrew/lib/libssl.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php: /home/linuxbrew/.linuxbrew/lib/libssl.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php)&#10;/home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php: /home/linuxbrew/.linuxbrew/lib/libcrypto.so.1.0.0: no version information available (required by /home/kkarboviak/.phpbrew/php/php-7.0.18/bin/php)&#10;">
           <additional_php_ini>$USER_HOME$/.phpbrew/php/php-7.0.18/var/db/xdebug.ini</additional_php_ini>
           <configuration_file>$USER_HOME$/.phpbrew/php/php-7.0.18/etc/php.ini</configuration_file>
           <configuration_options>
@@ -585,7 +655,7 @@
             <configuration_option name="error_reporting" value="32767" />
             <configuration_option name="exit_on_timeout" value="0" />
             <configuration_option name="expose_php" value="1" />
-            <configuration_option name="extension_dir" value="$USER_HOME$/.phpbrew/php/php-7.0.18/lib/php/extensions/no-debug-non-zts-20151012" />
+            <configuration_option name="extension_dir" value="$USER_HOME$/.phpbrew/php/php-7.0.18/lib/php/extensions/debug-non-zts-20151012" />
             <configuration_option name="file_uploads" value="1" />
             <configuration_option name="filter.default" value="unsafe_raw" />
             <configuration_option name="filter.default_flags" value="" />
@@ -600,7 +670,7 @@
             <configuration_option name="ignore_repeated_source" value="" />
             <configuration_option name="ignore_user_abort" value="0" />
             <configuration_option name="implicit_flush" value="1" />
-            <configuration_option name="include_path" value=".:/home/kkarboviak/.phpbrew/php/php-7.0.18/lib/php" />
+            <configuration_option name="include_path" value=".:/home/kkarboviak/.phpbrew/php/php-7.0.18/lib/php/pear" />
             <configuration_option name="input_encoding" value="" />
             <configuration_option name="internal_encoding" value="" />
             <configuration_option name="log_errors" value="1" />
@@ -631,7 +701,7 @@
             <configuration_option name="mysqli.default_host" value="" />
             <configuration_option name="mysqli.default_port" value="3306" />
             <configuration_option name="mysqli.default_pw" value="" />
-            <configuration_option name="mysqli.default_socket" value="/var/run/mysqld/mysqld.sock" />
+            <configuration_option name="mysqli.default_socket" value="" />
             <configuration_option name="mysqli.default_user" value="" />
             <configuration_option name="mysqli.max_links" value="-1" />
             <configuration_option name="mysqli.max_persistent" value="-1" />
@@ -640,6 +710,12 @@
             <configuration_option name="mysqlnd.collect_memory_statistics" value="1" />
             <configuration_option name="mysqlnd.collect_statistics" value="1" />
             <configuration_option name="mysqlnd.debug" value="" />
+            <configuration_option name="mysqlnd.debug_calloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_ecalloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_emalloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_erealloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_malloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_realloc_fail_threshold" value="-1" />
             <configuration_option name="mysqlnd.fetch_data_copy" value="0" />
             <configuration_option name="mysqlnd.log_mask" value="0" />
             <configuration_option name="mysqlnd.mempool_default_size" value="16000" />
@@ -657,7 +733,8 @@
             <configuration_option name="pcre.backtrack_limit" value="1000000" />
             <configuration_option name="pcre.jit" value="1" />
             <configuration_option name="pcre.recursion_limit" value="100000" />
-            <configuration_option name="pdo_mysql.default_socket" value="/var/run/mysqld/mysqld.sock" />
+            <configuration_option name="pdo_mysql.debug" value="" />
+            <configuration_option name="pdo_mysql.default_socket" value="/tmp/mysql.sock" />
             <configuration_option name="phar.cache_list" value="" />
             <configuration_option name="phar.readonly" value="1" />
             <configuration_option name="phar.require_hash" value="1" />
@@ -739,12 +816,12 @@
             <configuration_option name="xdebug.dump_once" value="1" />
             <configuration_option name="xdebug.dump_undefined" value="0" />
             <configuration_option name="xdebug.extended_info" value="1" />
-            <configuration_option name="xdebug.file_link_format" value="phpstorm://open?%f:%l" />
+            <configuration_option name="xdebug.file_link_format" value="" />
             <configuration_option name="xdebug.force_display_errors" value="0" />
             <configuration_option name="xdebug.force_error_reporting" value="0" />
             <configuration_option name="xdebug.halt_level" value="0" />
-            <configuration_option name="xdebug.idekey" value="PHPSTORM" />
-            <configuration_option name="xdebug.max_nesting_level" value="512" />
+            <configuration_option name="xdebug.idekey" value="" />
+            <configuration_option name="xdebug.max_nesting_level" value="256" />
             <configuration_option name="xdebug.max_stack_frames" value="-1" />
             <configuration_option name="xdebug.overload_var_dump" value="2" />
             <configuration_option name="xdebug.profiler_aggregate" value="0" />
