@@ -1,0 +1,9 @@
+<templateSet group="JavaScript">
+  <template name="jqajax" value="$.ajax({&#10;    type: 'GET',&#10;    dataType: 'json',&#10;    url: '',&#10;    data: {}&#10;}).done(function (data, textStatus, jqXHR) {&#10;    $END$&#10;}).fail(function (jqXHR, textStatus, errorThrown) {&#10;    console.log(errorThrown);&#10;});" description="jQuery AJAX call" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+    </context>
+  </template>
+</templateSet>
